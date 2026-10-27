@@ -1,7 +1,8 @@
 class Sweep < Formula
   desc "Menu bar uninstaller that also removes the files an app leaves behind"
   homepage "https://github.com/pandeynmn/sweep"
-  # shortcut: no tagged release yet, so only --HEAD installs work; add url + sha256 here after tagging v1.0.0.
+  url "https://github.com/pandeynmn/sweep/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "4b70de3ef2a29465bafb5083bfaf1083ab4a1cb55c54207cbd9f169d809141a0"
   head "https://github.com/pandeynmn/sweep.git", branch: "main"
   license :cannot_represent # free for personal use, see LICENSE
 

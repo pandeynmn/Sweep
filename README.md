@@ -41,7 +41,7 @@ notarized.
 
 ```sh
 brew tap pandeynmn/sweep https://github.com/pandeynmn/sweep
-brew install --HEAD pandeynmn/sweep/sweep
+brew install pandeynmn/sweep/sweep
 ```
 
 That puts the `sweep` command on your PATH. For the menu bar app and the Finder Quick Actions, link the app into
@@ -52,8 +52,8 @@ ln -sfn "$(brew --prefix)/opt/sweep/Sweep.app" ~/Applications/Sweep.app
 open ~/Applications/Sweep.app
 ```
 
-There's no tagged release yet, which is why `--HEAD` is needed. Upgrade with `brew upgrade --fetch-HEAD sweep`.
-Homebrew's build is ad-hoc signed (it can't use my certificate), so macOS asks for App Management and Full Disk
+This installs the latest release ([1.0.0](https://github.com/pandeynmn/sweep/releases/tag/v1.0.0)). Upgrade with
+`brew upgrade sweep`, or add `--HEAD` to build from `main`. Homebrew's build is ad-hoc signed (it can't use my certificate), so macOS asks for App Management and Full Disk
 Access again after every upgrade.
 
 ## Building
