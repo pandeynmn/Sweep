@@ -43,12 +43,6 @@ from source on your Mac, so it doesn't need to be notarized.
 brew install pandeynmn/sweep/sweep
 ```
 
-If you tapped this repository before 1.0.1, switch to the new tap first:
-
-```sh
-brew untap --force pandeynmn/sweep && brew tap pandeynmn/sweep
-```
-
 That puts the `sweep` command on your PATH. For the menu bar app and the Finder Quick Actions, link the app into
 `~/Applications` and open it once:
 
