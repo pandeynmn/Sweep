@@ -36,12 +36,17 @@ example; Sweep shows that match but leaves the decision to you. `HANDOFF.md` has
 
 ## Install with Homebrew
 
-The repository doubles as a Homebrew tap. Homebrew builds Sweep from source on your Mac, so it doesn't need to be
-notarized.
+The formula lives in [pandeynmn/homebrew-sweep](https://github.com/pandeynmn/homebrew-sweep). Homebrew builds Sweep
+from source on your Mac, so it doesn't need to be notarized.
 
 ```sh
-brew tap pandeynmn/sweep https://github.com/pandeynmn/sweep
 brew install pandeynmn/sweep/sweep
+```
+
+If you tapped this repository before 1.0.1, switch to the new tap first:
+
+```sh
+brew untap --force pandeynmn/sweep && brew tap pandeynmn/sweep
 ```
 
 That puts the `sweep` command on your PATH. For the menu bar app and the Finder Quick Actions, link the app into
@@ -52,7 +57,7 @@ ln -sfn "$(brew --prefix)/opt/sweep/Sweep.app" ~/Applications/Sweep.app
 open ~/Applications/Sweep.app
 ```
 
-This installs the latest release ([1.0.0](https://github.com/pandeynmn/sweep/releases/tag/v1.0.0)). Upgrade with
+This installs the latest release ([1.0.1](https://github.com/pandeynmn/sweep/releases/tag/v1.0.1)). Upgrade with
 `brew upgrade sweep`, or add `--HEAD` to build from `main`. Homebrew's build is ad-hoc signed (it can't use my certificate), so macOS asks for App Management and Full Disk
 Access again after every upgrade.
 
