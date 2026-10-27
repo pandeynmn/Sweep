@@ -1,0 +1,40 @@
+# Source of Sweep.xcodeproj: run `xcodegen` after editing. build.sh stays the Homebrew path (no Xcode there).
+name: Sweep
+options:
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+targets:
+  Sweep:
+    type: application
+    platform: macOS
+    sources:
+      - Sources
+      - AppIcon.icon
+    settings:
+      base:
+        INFOPLIST_FILE: Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: dev.pand.sweep
+        PRODUCT_NAME: Sweep
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        SWIFT_VERSION: "5.0" # build.sh's swiftc defaults to Swift 5 mode
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: 648WP6YBU2 # a stable identity keeps App Management / Full Disk Access across rebuilds
+        ENABLE_HARDENED_RUNTIME: NO
+        ENABLE_USER_SCRIPT_SANDBOXING: NO # swiftformat rewrites Sources/
+    preBuildScripts:
+      - name: SwiftFormat & SwiftLint
+        basedOnDependencyAnalysis: false
+        script: |
+          export PATH="/opt/homebrew/bin:$PATH"
+          if command -v swiftformat > /dev/null; then swiftformat --quiet "$SRCROOT"; fi
+          if command -v swiftlint > /dev/null; then cd "$SRCROOT" && swiftlint --quiet; fi
+schemes:
+  Sweep:
+    build:
+      targets:
+        Sweep: all
+    run:
+      config: Debug
+      environmentVariables:
+        SWEEP_GUI: "1" # Xcode's console is a tty, which main.swift would otherwise take for the CLI

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Artboard 1</title>
+  <g id="sparkle">
+    <path d="M790 148 L799.899 200.101 L852 210 L799.899 219.899 L790 272 L780.101 219.899 L728 210 L780.101 200.101 Z" fill="#ffffff"/>
+    <path d="M862 286 L867.657 312.343 L894 318 L867.657 323.657 L862 350 L856.343 323.657 L830 318 L856.343 312.343 Z" fill="#ffffff"/>
+  </g>
+</svg>

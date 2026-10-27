@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Artboard 1</title>
+  <g id="sweep">
+    <path d="M220 600 C236 800 440 912 742 880 C520 872 320 800 220 600 Z" fill="#ffffff"/>
+    <path d="M170 690 C205 790 290 850 400 880 C305 872 225 815 170 690 Z" fill="#ffffff"/>
+  </g>
+</svg>
