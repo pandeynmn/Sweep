@@ -6,6 +6,8 @@
 	<string>dev.pand.sweep</string>
 	<key>CFBundleName</key>
 	<string>Sweep</string>
+	<key>CFBundleDisplayName</key>
+	<string>Sweep</string>
 	<key>CFBundleExecutable</key>
 	<string>Sweep</string>
 	<key>CFBundleIconFile</key>
@@ -15,9 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.developer-tools</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>14.0</string>
 	<key>LSUIElement</key>
